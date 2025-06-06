@@ -26,6 +26,10 @@ docker-compose build
 docker-compose up
 ```
 
+The services share files through the `/media` directory which is backed by the
+`media_data` Docker volume. Any media files produced by one service are
+available to the others under this path.
+
 ## Example n8n workflow
 
 1. **HTTP Request** – call `service1` with `{ "videoUrl": "..." }`. Save
