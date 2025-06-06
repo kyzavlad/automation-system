@@ -33,7 +33,9 @@ docker-compose up
 2. **HTTP Request** – call `service2` with `{ "inputPath": "input.mp4", "start": 0,
    "end": 60 }`. Save `clipPath`.
 3. **HTTP Request** – call `service3` with `{ "inputPath": "clip.mp4" }`.
-4. **HTTP Request** – call `service4` or `service5` to publish the result.
+4. **HTTP Request** – publish the result:
+   - call `service4` on port `3004` for short videos, or
+   - call `service5` on port `3005` for long videos.
 
 The output of each step can be used as input for the next one inside n8n.
 
