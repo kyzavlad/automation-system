@@ -6,16 +6,22 @@ services:
       dockerfile: service1/Dockerfile
     ports:
       - "3001:3001"
+    volumes:
+      - media_data:/data
 
   service2:
     build: ./service2
     ports:
       - "3002:3002"
+    volumes:
+      - media_data:/data
 
   service3:
     build: ./service3
     ports:
       - "3003:3003"
+    volumes:
+      - media_data:/data
 
   service4:
     build: ./service4
@@ -26,3 +32,6 @@ services:
     build: ./service5
     ports:
       - "3005:3005"
+
+volumes:
+  media_data:

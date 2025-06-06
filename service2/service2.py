@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
-import subprocess, traceback
+import subprocess, traceback, os
+
+DATA_DIR = '/data'
 
 app = Flask(__name__)
 
@@ -9,18 +11,35 @@ def run(cmd):
         raise Exception(f"Command `{cmd}` failed:\n{proc.stderr.strip()}")
     return proc.stdout
 
-@app.route('/clip', methods=['POST'])
+@app.route('/clip-video', methods=['POST'])
 def clip_video():
     try:
         data = request.get_json(force=True)
         input_path = data.get('inputPath')
-        start = data.get('start')
-        end = data.get('end')
-        if not input_path or start is None or end is None:
-            return jsonify(error='Missing inputPath, start or end'), 400
-        output_path = 'clip.mp4'
-        run(f'ffmpeg -y -i "{input_path}" -ss {start} -to {end} -c copy "{output_path}"')
-        return jsonify({'clipPath': output_path})
+        segments = data.get('segments', [])
+        if not input_path or not isinstance(segments, list):
+            return jsonify(error='Missing inputPath or segments'), 400
+
+        clips = []
+        for i, seg in enumerate(segments):
+            start = seg.get('start')
+            end = seg.get('end')
+            engagement = seg.get('engagement', 0)
+            if start is None or end is None:
+                continue
+            duration = end - start
+            if duration < 15 or duration > 90:
+                continue
+            if engagement < 0.7:
+                continue
+            output_path = os.path.join(DATA_DIR, f'clip_{i}.mp4')
+            run(f'ffmpeg -y -i "{input_path}" -ss {start} -to {end} -c copy "{output_path}"')
+            clips.append({'path': output_path, 'start': start, 'end': end})
+
+        if not clips:
+            return jsonify(error='no_clips_found'), 400
+
+        return jsonify({'clips': clips})
     except Exception as e:
         traceback.print_exc()
         return jsonify(error=str(e)), 500

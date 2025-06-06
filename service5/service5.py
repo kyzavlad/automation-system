@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-import traceback
+import traceback, time, random
 
 app = Flask(__name__)
 
@@ -7,11 +7,17 @@ app = Flask(__name__)
 def publish_long():
     try:
         data = request.get_json(force=True)
-        video_path = data.get('videoPath')
-        accounts = data.get('accounts', [])
-        if not video_path or not accounts:
-            return jsonify(error='Missing videoPath or accounts'), 400
-        return jsonify({'status': 'ok', 'accounts': accounts})
+        video = data.get('video')
+        variations = data.get('seo_variations', [])
+        if not video or not variations:
+            return jsonify(error='Missing video or seo_variations'), 400
+
+        results = []
+        for v in variations:
+            time.sleep(random.randint(30, 60))
+            results.append({'variation': v, 'status': 'ok'})
+
+        return jsonify({'results': results})
     except Exception as e:
         traceback.print_exc()
         return jsonify(error=str(e)), 500
