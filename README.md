@@ -35,7 +35,8 @@ docker-compose up
 3. **HTTP Request** – call `service3` with `{ "inputPath": "clip.mp4" }`.
 4. **HTTP Request** – publish the result:
    - call `service4` on port `3004` for short videos, or
-   - call `service5` on port `3005` for long videos.
+   - call `service5` on port `3005` for long videos (as mapped in
+     `docker-compose.yml`).
 
 The output of each step can be used as input for the next one inside n8n.
 
