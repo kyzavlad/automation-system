@@ -40,13 +40,13 @@
         }
       ]
     },
-    "pinterest": {
+    "x": {
       "accounts": [
         {
-          "id": "pinterest_1",
+          "id": "x_1",
           "username": "ЗАПОЛНИТЬ",
           "password": "ЗАПОЛНИТЬ",
-          "board_id": "ЗАПОЛНИТЬ"
+          "cookies": "ЗАПОЛНИТЬ"
         }
       ]
     }

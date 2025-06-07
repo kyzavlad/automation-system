@@ -83,7 +83,7 @@ For each clip, analyze the transcript and generate titles that:
 - Instagram Reels: Location tags, 10-15 hashtags
 - YouTube Shorts: #Shorts mandatory, 2-3 other tags
 - Facebook Reels: Minimal hashtags, focus on captions
-- Pinterest: SEO-optimized descriptions
+- X: Keep captions short and use trending hashtags
 
 **Long videos (10 YouTube accounts):**
 - Each account gets different SEO variation

@@ -32,7 +32,7 @@
    Body: {
      "clips": "{{ $json.clips }}",
      "titles": "{{ $json.titles }}",
-     "platforms": ["tiktok", "instagram", "youtube_shorts", "facebook", "pinterest"]
+    "platforms": ["tiktok", "instagram", "youtube_shorts", "facebook", "x"]
    }
 
 5. Publish Long:
