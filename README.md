@@ -46,9 +46,11 @@ Several configuration files are included in the repository root:
 
 - `workflow-config.txt` – sample n8n settings.
 - `workflow-settings.txt` – final settings for all 8 modules.
+- `workflow.json` – example n8n workflow to import.
 - `ai-agent-prompt.txt` – example agent prompt.
 - `agent-system-prompt.txt` – detailed system prompt used by the agent.
 - `accounts-config.json` – account details for each social platform.
 - `api-keys.env` – API keys and tokens used by the services.
 
+The `.env` file must define keys like `OPENAI_API_KEY`, `AIRTABLE_API_KEY`, `YOUTUBE_API_KEY`, `FACEBOOK_APP_ID`, `FACEBOOK_APP_SECRET`, `PINTEREST_APP_ID`, and `PINTEREST_APP_SECRET`.
 Fill the `ЗАПОЛНИТЬ` placeholders with real credentials before running the system.

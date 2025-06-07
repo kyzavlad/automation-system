@@ -37,7 +37,7 @@
 
 5. Publish Long:
    Method: POST
-   URL: http://165.227.84.254:3004/publish-long
+   URL: http://165.227.84.254:3005/publish-long
    Headers: {"Content-Type": "application/json"}
    Body: {
      "video": "{{ $json.video }}",
