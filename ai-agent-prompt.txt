@@ -11,7 +11,7 @@ You control 8 tools to process videos from download to multi-platform publishing
 4. Transcribe and Download Video - Download & transcribe with Whisper AI
 5. Clip Long Video - Extract 5-10 viral moments using AI analysis
 6. Edit Shorts Video - Add captions, music, effects, transitions
-7. Publish Shorts - Post to 50 accounts (5 platforms × 10 accounts)
+7. Publish Shorts - Post to 40 accounts (4 platforms × 10 accounts)
 8. Publish Long - Post to 10 YouTube accounts with A/B testing
 
 ## COMMAND PATTERNS:

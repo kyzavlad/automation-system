@@ -192,60 +192,6 @@
         }
       ]
     },
-    "facebook": {
-      "accounts": [
-        {
-          "id": "facebook_1",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_2",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_3",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_4",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_5",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_6",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_7",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_8",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_9",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        },
-        {
-          "id": "facebook_10",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        }
-      ]
-    },
     "x": {
       "accounts": [
         {
