@@ -31,15 +31,6 @@
         }
       ]
     },
-    "facebook": {
-      "accounts": [
-        {
-          "id": "facebook_1",
-          "page_id": "ЗАПОЛНИТЬ",
-          "access_token": "ЗАПОЛНИТЬ"
-        }
-      ]
-    },
     "x": {
       "accounts": [
         {

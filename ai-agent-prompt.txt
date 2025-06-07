@@ -78,11 +78,10 @@ For each clip, analyze the transcript and generate titles that:
 - Match current platform trends
 
 ## PUBLISHING STRATEGY:
-**Shorts (5 platforms × 10 accounts = 50 posts):**
+**Shorts (4 platforms × 10 accounts = 40 posts):**
 - TikTok: Trending sounds, 3-5 hashtags
 - Instagram Reels: Location tags, 10-15 hashtags
 - YouTube Shorts: #Shorts mandatory, 2-3 other tags
-- Facebook Reels: Minimal hashtags, focus on captions
 - X: Keep captions short and use trending hashtags
 
 **Long videos (10 YouTube accounts):**
