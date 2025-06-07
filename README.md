@@ -16,6 +16,14 @@ This repository contains a collection of small Flask services used in a single n
    docker-compose build
    docker-compose up -d
    ```
+## Configuration
+Create a `.env` file based on `api-keys.env` and provide the following variables:
+- `OPENAI_API_KEY` – used by service1 for transcription.
+- `AIRTABLE_API_KEY` – Airtable access token.
+- `AIRTABLE_BASE_ID` and `AIRTABLE_TABLE_ID` – IDs of your base and table.
+- `YOUTUBE_API_KEY` – for publishing videos.
+- `FACEBOOK_APP_ID` and `FACEBOOK_APP_SECRET` – Facebook uploads.
+- Place your authenticated browser cookies in `cookies.txt`; the file is copied into service1.
 
 ## Services
 | Service  | Endpoint & Port              | Purpose |
