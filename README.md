@@ -10,7 +10,7 @@ This repository contains a collection of small Flask services used in a single n
 ## Installation
 1. Clone this repository.
 2. Copy `api-keys.env` to `.env` and fill in all placeholders.
-3. Add account details in `accounts-config.json`.
+3. Add account details in `accounts-config.json` (ten accounts per platform).
 4. Build and start the services:
    ```bash
    docker-compose build
@@ -69,6 +69,19 @@ Import `workflow.json` into n8n and connect each node to the credentials you cre
        }
      }
      ```
+## Running the system
+1. Ensure `.env` contains your API keys and that `accounts-config.json` lists 10 accounts for each platform.
+2. Build and start the containers:
+   ```bash
+   docker-compose build
+   docker-compose up -d
+   ```
+3. Open your n8n instance and import `workflow.json`.
+4. In each node, select the credentials you created (Airtable token, OpenAI key, etc.).
+5. Open the AI Agent node and paste the contents of `ai-agent-prompt.txt` or `agent-system-prompt.txt` into the System Message field.
+6. Trigger the workflow by sending a chat message like:
+   `process video recXXXXXXXXXXXX for shorts`
+7. Monitor container logs with `docker-compose logs -f` if troubleshooting is needed.
 7. **Publish Shorts** – HTTP POST
    - URL: `http://165.227.84.254:3004/publish-shorts`
    - Body: `{ "clips": "{{ $json.clips }}", "titles": "{{ $json.titles }}" }`
